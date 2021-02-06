@@ -1,7 +1,7 @@
 //JS tutorial from freecodecamp.org
 // window.alert("javascript is loaded and ready!");
 class UI {
-    //setting variables
+    //setting variables using constructor "this" method
     constructor() {
         this.budgetFeedback = document.querySelector(".budget-feedback");
         this.expenseFeedback = document.querySelector(".expense-feedback");
@@ -21,21 +21,34 @@ class UI {
     //submit button budget, function will run the following code
     submitBudgetForm(){
         // console.log('hello from es6');
+        // set variabe value = the "this.budgetInput.value" value = what the user types in the field
         const value = this.budgetInput.value;
         if(value === '' || value <0){
             this.budgetFeedback.classList.add('showItem');
             this.budgetFeedback.innerHTML = `<p>field can't be empty or negative.</p>`;
-            console.log('error message will appear on DOM');
+            //if statement is if the value is empty or less than 0 the warning from the "budget-feedback" of HTML class with bootstrap css warning.
+
+            const self = this;
+            //set variable self to "this"
+            // console.log('error message will appear on DOM');
+            setTimeout(function(){
+                self.budgetFeedback.classList.remove("showItem");
+            }, 4000);
+            //setTimeout function will remove the "budgetFeedback" in 4 secs
         }
         else{
             this.budgetAmount.textContent = value;
             this.budgetInput.value = "";
             this.showBalance();
         }
+        //"thisAmount.textContent = value"
+        //this.budgetInput.value = ""
+        //this.showBalance() function will run
     }
     //show balance
     showBalance(){
         const expense = this.totalExpense();
+        //
         //parseInt would convert argument into a string (string of numbers with no [,]).
         const total = parseInt(this.budgetAmount.textContent) - expense;
         this.balanceAmount.textContent = total;
@@ -61,11 +74,15 @@ class UI {
         {
             this.expenseFeedback.classList.add('showItem');
             this.expenseFeedback.innerHTML = `<p>field can't be empty or negative.</p>`
+            const self = this;
+            setTimeout(function(){
+                self.expenseFeedback.classList.remove("showItem");
+            }, 4000);
         }
         else {
             let amount = parseInt(amountValue);
-            this.expenseInput = "";
-            this.amountInput = "";
+            this.expenseInput.value = "";
+            this.amountInput.value = "";
 
             let expense = {
                 id:this.itemID,
@@ -76,6 +93,7 @@ class UI {
             this.itemID++;
             this.itemList.push(expense);
             this.addExpense(expense);
+            this.showBalance();
             //show balance
         }
     }
@@ -100,10 +118,57 @@ class UI {
       </div>`;
       this.expenseList.appendChild(div);
     }
-    //total expense
+
+    //total expense function
     totalExpense(){
-        let total = 100;
+        //set total to number 0
+        let total = 0;
+
+        if(this.itemList.length > 0){
+            // console.log(this.itemList);
+            total = this.itemList.reduce(function(acc,curr){
+                console.log(`Total ${acc} and the current value is ${curr.amount}`);
+                acc +=curr.amount
+                return acc;
+            },0)
+        }
+        this.expenseAmount.textContent = total;
+
         return total;
+    }
+    //edit expense function
+    editExpense(element){
+        let id = parseInt(element.dataset.id);
+        let parent = element.parentElement.parentElement.parentElement;
+        //remove entry from the dom
+        this.expenseList.removeChild(parent);
+        //remove from the list
+        let expense = this.itemList.filter(function(item){
+            return item.id === id;
+        })
+        //show value from the constructor class itemID and itemList the value will be plugged back in the expense form so the user can edit the entry
+        this.expenseInput.value = expense[0].title;
+        this.amountInput.value = expense[0].amount;
+        //remove from list
+        let tempList = this.itemList.filter(function(item){
+            return item.id !== id;
+        })
+        this.itemList = tempList;
+        this.showBalance()
+
+    }
+    //delete expense function
+    deleteExpense(element){
+        let id = parseInt(element.dataset.id);
+        let parent = element.parentElement.parentElement.parentElement;
+        //remove entry from the dom
+        this.expenseList.removeChild(parent);
+        //remove from the list
+        let tempList = this.itemList.filter(function(item){
+            return item.id !== id;
+        })
+        this.itemList = tempList;
+        this.showBalance()
     }
 }
 
@@ -119,6 +184,7 @@ function eventListeners(){
     budgetForm.addEventListener('submit', function(event){
         event.preventDefault();
         ui.submitBudgetForm();
+        console.log("calculate btn was pressed")
 
     });
 
@@ -126,11 +192,18 @@ function eventListeners(){
     expenseForm.addEventListener('submit', function(event){
         event.preventDefault();
         ui.submitExpenseForm();
+        console.log("Add Expense btn was pressed")
 
     })
 
     //expense click (expense value & title edit and trash)
-    expenseList.addEventListener('click', function(){
+    expenseList.addEventListener('click', function(event){
+        if(event.target.parentElement.classList.contains('edit-icon')){
+            ui.editExpense(event.target.parentElement)
+        }
+        else if (event.target.parentElement.classList.contains('delete-icon')){
+            ui.deleteExpense(event.target.parentElement)
+        }
         
     })
 
