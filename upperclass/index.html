@@ -12,9 +12,8 @@
     <div class="container-fluid">
         <div class="row">
             <!--title of app-->
-            <div class="col-11 mx-auto p-3">
-                <h3 class="UPPERclassman">UPPERclassman</h3> 
-            </div>
+            <!-- <div class="bg-light header col-11 mx-auto p-3">
+            </div> -->
             <div class="row">
                 <div class="col-md-5 my-3">
                     <!--budget alert message-->
@@ -33,17 +32,20 @@
                     <div class="row my-3">
                         <div class="col-4 text-center mb-2">
                             <h6 class="info-title">Budget</h6>
-                            <span class="budget-icon"><i class="fas fa-money-bill-wave fa-2x"></i></span>
+                            <span class="budget-icon"><img class="budget-png" src="./budget-icons_budget.png"></span>
+                            <!--<i class="fas fa-money-bill-wave fa-2x"></i>-->
                             <h4 class="mt-2 budget" id="budget"><span>$</span><span id="budget-amount">0</span></h4>
                         </div>
                         <div class="col-4 text-center">
                             <h6 class="info-title">Expense</h6>
-                            <span class="expense-icon"><i class="far fa-credit-card fa-2x"></i></span>
+                            <span class="expense-icon"><img class="expense-png" src="./budget-icons_expense.png"></span>
+                            <!--<i class="far fa-credit-card fa-2x"></i>-->
                             <h4 class="mt-2 expense" id="expense"><span>$</span><span id="expense-amount">0</span></h4>
                         </div>
                         <div class="col-4 text-center">
                             <h6 class="info-title">Balance</h6>
-                            <span class="balance-icon"><i class="fas fa-hand-holding-usd fa-2x"></i></span>
+                            <span class="balance-icon"><img class="balance-png" src="./budget-icons_balance.png"></span>
+                            <!--<i class="fas fa-hand-holding-usd fa-2x"></i>-->
                             <h4 class="mt-2 balance" id="balance"><span>$</span><span id="balance-amount">0</span></h4>
                         </div>
                     </div>
@@ -52,7 +54,7 @@
                     <div class="col-md-5 my-3">
                         <div class="expense-feedback alert alert-danger text-capitalize">expense feedback</div>
                         <form id="expense-form" class="expense-form">
-                            <h5 class="text-capitalize">please enter your expense</h5>
+                            <h5>Please enter your expense</h5>
                             <div class="form-group expense-group">
                                 <input type="text" class="form-control expense-input" id="expense-input">
                             </div>
@@ -72,20 +74,36 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-5 calendar">
-                        
+                <!-- <footer class="sticky-bottom">
+                    <div id="budget-foot">
+                      <h4 id="foot-name">Website by Chelsea S. Jackson</h4>
+                      <button type="button" class="btn btn-info" id="port-foot">Portfolio</button>
+                      <button type="button" class="btn btn-info" id="github-foot">Github</button>
+                      <button type="button" class="btn btn-info" id="email-foot">Email</button>
                     </div>
-                </div>
+                  </footer> -->
+                <!-- <div class="row">
+                    <div class="col-md-5">
+                        <div class="card" style="width: 18rem;">
+                            <img src="./upperclass-4_background.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                          </div>
+                    </div>
+                </div> -->
             </div>
         </div>
-      </div>
-     <!-- jquery -->
- <!-- <script src="js/jquery-3.3.1.min.js"></script> -->
- <!-- bootstrap js -->
- <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
- <!-- script js -->
- <!-- <script src="chart.js"></script> -->
+        <footer class="navbar navbar-light bg-light home-foot">
+            <div class="budget-foot">
+                <h4 id="foot-name">Website by Chelsea S. Jackson</h4>
+                <button type="button" class="btn btn-info" id="port-foot" onclick="portOpen()" >Portfolio</button>
+                <button type="button" class="btn btn-info" id="github-foot" onclick="gitOpen()">Github</button>
+                <button type="button" class="btn btn-info" id="email-foot" onclick="emailOpen()">Email</button>
+            </div>
+          </footer>
+    </div>
+
  <script src="budget.js"></script>
 </body>
 </html>

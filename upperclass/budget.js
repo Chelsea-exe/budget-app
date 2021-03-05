@@ -1,5 +1,6 @@
 //JS tutorial from freecodecamp.org
 // window.alert("javascript is loaded and ready!");
+
 class UI {
     //setting variables using constructor "this" method
     constructor() {
@@ -212,3 +213,13 @@ function eventListeners(){
 document.addEventListener('DOMContentLoaded', function(){
     eventListeners();
 })
+function portOpen() { 
+    window.open("http://chelsea-exe.github.io/", "_blank"); 
+}
+function gitOpen() {
+    window.open("http://github.com/Chelsea-Exe/", "_blank");
+}
+function emailOpen() {
+    event.preventDefault();
+    window.open("mailto:c.sjackson726@gmail.com", "_blank")
+}
