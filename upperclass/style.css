@@ -11,15 +11,17 @@
     background: var(--mainWhite);
     color: var(--mainDark);
   }
-.container-fluid {
+/* .container-fluid {
   padding-top: 120px;
-}
+} */
   .header {
-    background-image: url(./budget-background\ [Recovered]-03.png);
-    background-position: unset;
-    background-size: 120vh;
+    background-image: url(./budget-background\ [Recovered]-03-03-03.png);
+    background-position: right;
+    background-size: auto;
     background-repeat: no-repeat;
     min-height: 400px;
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
   }
   .budget-feedback,
   .expense-feedback {
