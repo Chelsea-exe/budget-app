@@ -5,23 +5,33 @@
     --mainRed: #b80c09;
     --mainBlue: #05668d;
     --mainYellow: yellow;
+    --font: 'Noto Serif', serif;
   }
   
-  body {
+  /* body {
     background: var(--mainWhite);
     color: var(--mainDark);
-  }
+  } */
 /* .container-fluid {
   padding-top: 120px;
 } */
   .header {
     background-image: url(./budget-background\ [Recovered]-03-03-03.png);
     background-position: right;
-    background-size: auto;
+    background-size: cover;
     background-repeat: no-repeat;
     min-height: 400px;
     border-bottom-left-radius: 3rem;
     border-bottom-right-radius: 3rem;
+  }
+  .jumbo-header {
+    font-family: var(--font);
+    font-weight: 700;
+    color: rgb(75, 75, 75);
+  }
+  .description {
+    font-size: 1.1rem;
+    margin-top: 2rem;
   }
   .budget-feedback,
   .expense-feedback {
@@ -137,7 +147,7 @@
   .showBlack {
     color: var(--mainDark);
   }
-  @media screen and (min-width: 992px) {
+  @media screen and (max-width: 992px) {
     .budget {
       font-size: 2.6rem;
       color: var(--mainGreen);
@@ -149,12 +159,28 @@
     .balance {
       font-size: 2.6rem;
     }
+    .description {
+      font-weight: 700;
+    }
     .budget-icon,
     .expense-icon,
     .balance-icon {
       font-size: 3.5rem;
       color: var(--mainBlue);
     }
+    .budget-png,
+    .expense-png,
+    .balance-png {
+      height: 5rem; 
+    }
+    #budget-amount,
+    #expense-amount,
+    #balance-amount,
+    span
+    {
+      font-size: 1.8rem;
+    }
+
   }
   .list-item {
     flex: 0 0 33.33%;
