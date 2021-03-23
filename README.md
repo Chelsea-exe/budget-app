@@ -4,4 +4,4 @@
 amount in the selected field use our system to calculate your
 funds to properly budget.</p><br>
 <p>The javascript is from a tutorial from the very helpful website for coding beginners freecodecamp.org</p>
-<img src="./readME-img.png">
+<img src="./readME-img.png" class="photoReadME">
