@@ -16,13 +16,16 @@
   padding-top: 120px;
 } */
   .header {
-    background-image: url(./budget-background\ [Recovered]-03-03-03.png);
+    background-image: url(./budget-background-update-03.png);
     background-position: right;
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 400px;
     border-bottom-left-radius: 3rem;
     border-bottom-right-radius: 3rem;
+  }
+  .mbl-row {
+    margin
   }
   .jumbo-header {
     font-family: var(--font);
@@ -80,6 +83,16 @@
   }
   .expense-group {
       margin-bottom: 10px;
+  }
+  .btn-info {
+    background-color: rgb(84, 238, 130);
+    border: rgb(84, 238, 130);
+  }
+  .btn-info:hover {
+    background-color: rgb(51, 218, 101);
+  }
+  #foot-name {
+    font-family: var(--font);
   }
   .expense-amount,
   .expense-title {
@@ -148,6 +161,9 @@
     color: var(--mainDark);
   }
   @media screen and (max-width: 992px) {
+    .header {
+      background-image: url(./budget-background-update-sm-03.png);
+    }
     .budget {
       font-size: 2.6rem;
       color: var(--mainGreen);
@@ -160,7 +176,9 @@
       font-size: 2.6rem;
     }
     .description {
-      font-weight: 700;
+      margin-top: -2%;
+      color: rgb(73, 73, 73);
+      font-size: 0.9rem;
     }
     .budget-icon,
     .expense-icon,
