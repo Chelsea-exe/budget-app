@@ -1,5 +1,4 @@
-# budget-app
-<h1>UPPERclassman</h1>
+# Upperclassman Budgeting
 <p>We're here to help you plan your future with the earrings you have.Begin by calculating your budget balance, expence title and
 amount in the selected field use our system to calculate your
 funds to properly budget.</p><br>
