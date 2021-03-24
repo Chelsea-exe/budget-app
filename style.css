@@ -88,6 +88,9 @@
   .btn-info:hover {
     background-color: rgb(51, 218, 101);
   }
+  footer {
+    margin-top: 20px;
+  }
   #foot-name {
     font-family: var(--font);
   }

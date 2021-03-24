@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 <link rel="stylesheet" href="./fontawesome-free-5.15.2-web/css/all.css">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="style.css">
 <title>Upperclassman Home</title>
 </head>
 <body>
@@ -17,7 +18,7 @@
             <div class="row">
                 <div class="bg-light header col-11 mx-auto p-3">
                     <h1 class="jumbo-header">Welcome to Upperclassman</h1>
-                    <p class="description">We're here to help you plan your future with the earrings you have. <br>Begin by calculating your budget balance, expence title and
+                    <p class="description">We're here to help you plan your future with the earrings you have. <br>Begin by calculating your net income, expense title and
                     <br>amount in the selected field use our system to calculate your <br>
                     funds to properly budget.</p>
                     </div>
@@ -28,9 +29,9 @@
                     <div class="budget-feedback alert alert-danger text-capitalize">budget feedback</div>
                     <!---budget form-->
                     <form id="budget-form" class="budget-form">
-                        <h5>Please enter your budget</h5>
+                        <h5>Please enter your income</h5>
                         <div class="form-group">
-                            <input type="number" class="form-control budget-input" id="budget-input">
+                            <input type="number" placeholder="0" class="form-control budget-input" id="budget-input">
                         </div>
                         <!--submit button-->
                         <button type="submit" class="btn text-capitalize budget-submit" id="budget-submit">calculate</button>
@@ -39,7 +40,7 @@
                 <div class="col-md-7">
                     <div class="row my-3">
                         <div class="col-4 text-center mb-2">
-                            <h6 class="info-title">Budget</h6>
+                            <h6 class="info-title">Income</h6>
                             <span class="budget-icon"><img class="budget-png" src="./budget-icons_budget.png"></span>
                             <!--<i class="fas fa-money-bill-wave fa-2x"></i>-->
                             <h4 class="mt-2 budget" id="budget"><span>$</span><span id="budget-amount">0</span></h4>
@@ -64,10 +65,16 @@
                         <form id="expense-form" class="expense-form">
                             <h5>Please enter your expense</h5>
                             <div class="form-group expense-group">
-                                <input type="text" class="form-control expense-input" id="expense-input">
+                                <input type="text" placeholder="Expense Title" list="datalistOptions" class="form-control expense-input" id="expense-input">
+                                <datalist id="datalistOptions">
+                                    <option value="Housing">
+                                    <option value="Transportation">
+                                    <option value="Utilites">
+                                    <option value="Misc...">
+                                </datalist>
                             </div>
                             <div class="form-group expense-group">
-                                <input type="number" class="form-control expense-input" id="amount-input">
+                                <input type="number" placeholder="0" class="form-control expense-input" id="amount-input">
                             </div>
                             <button type="submit" class="btn text-capitalize expense-submit" id="expense-submit">add expense</button>
                         </form>
