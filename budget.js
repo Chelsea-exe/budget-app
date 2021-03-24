@@ -100,7 +100,7 @@ class UI {
     }
 
     //add expense
-
+    //creating a new div via javascript and attaching it (appendChild) in the #expense-list
     addExpense(expense){
         const div = document.createElement('div');
         div.classList.add('expense');

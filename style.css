@@ -198,6 +198,10 @@
     {
       font-size: 1.8rem;
     }
+    .expense-title,
+    .expense-amount {
+      font-size: 32%;
+    }
 
   }
   .list-item {
