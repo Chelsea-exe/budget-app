@@ -160,6 +160,10 @@
   .showBlack {
     color: var(--mainDark);
   }
+  
+  #tips-div {
+    margin-top: 2rem;
+  }
   @media screen and (max-width: 992px) {
     .header {
       background-image: url(./budget-background-sm-03.png);
@@ -211,4 +215,3 @@
   .expense-item {
     height: 2rem;
   }
-  
