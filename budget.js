@@ -181,6 +181,9 @@ function eventListeners(){
     //new UI Class
     const ui = new UI()
 
+    // const budgetSubmit = document.querySelector('#budget-submit');
+    // budgetSubmit.addEventListener('click', () => budgetSubmit.style.backgroundColor = '#68f844')
+
     //budget form submit
     budgetForm.addEventListener('submit', function(event){
         event.preventDefault();

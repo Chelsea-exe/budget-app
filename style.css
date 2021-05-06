@@ -49,25 +49,31 @@
     padding: 1rem;
     border-radius: 2rem;
   }
-  .budget-submit {
-    background: transparent;
-    border: 0.1rem solid var(--mainGreen);
-    color: var(--mainGreen);
+  #budget-submit {
+    border: 0.08rem solid white;
+    background: linear-gradient(45deg, #68f844, #0a8606);
+    width: 100%;
+    color: white;
     border-radius: 2rem;
   }
-  .expense-submit {
-    background: transparent;
-    border: 0.1rem solid var(--mainRed);
+  #budget-submit:active {
+    background:  #68f844;
+    color: white;
+  }
+  #expense-submit {
+    background: linear-gradient(45deg, #ad1313, #ff0000);
+    border: 0.1rem solid White;
     border-radius: 2rem;
+    color: white;
+    width: 100%;
+  }
+  #expense-submit:hover {
+    background: White;
     color: var(--mainRed);
   }
-  .expense-submit:hover {
-    background: var(--mainRed);
-    color: var(--mainWhite);
-  }
-  .budget-submit:hover {
-    background: var(--mainGreen);
-    color: var(--mainWhite);
+  #budget-submit:hover {
+    background: white;
+    color: var(--mainGreen);
   }
   
   .budget-input {
@@ -175,6 +181,19 @@
     background-size: cover;
     background-repeat: no-repeat;
     width: 99%;
+  }
+  .budget-tip-img {
+    -webkit-transition:all .9s ease; 
+    -moz-transition:all .9s ease; 
+    -o-transition:all .9s ease;
+    -ms-transition:all .9s ease;
+  }
+  .budget-tip-img:hover {
+    -webkit-transform:scale(1.15);
+    -moz-transform:scale(1.15);
+    -ms-transform:scale(1.15);
+    -o-transform:scale(1.15);
+    transform:scale(1.15);
   }
   /*test code
   */
