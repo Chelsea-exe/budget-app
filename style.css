@@ -6,6 +6,7 @@
     --mainBlue: #05668d;
     --mainYellow: yellow;
     --font: 'Noto Serif', serif;
+    --fontTwo: 'Source Sans Pro', sans-serif;
   }
   
   
@@ -25,7 +26,7 @@
     border-bottom-left-radius: 3rem;
     border-bottom-right-radius: 3rem;
   }
-  .jumbo-header {
+  #app-header {
     font-family: var(--font);
     font-weight: 700;
     color: rgb(75, 75, 75);
@@ -176,11 +177,20 @@
    margin-top: 2rem; 
   }
   .money-header {
-    background-image: url(./budget-divider.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.39), rgba(0, 0, 0, 0.39)), url(./budget-tips-icon_banner_banner.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    height: 12rem;
     width: 99%;
+  }
+  #tips-header {
+    font-size: 5rem;
+    font-family: var(--fontTwo);
+    color: var(--mainWhite);
+    font-weight: 600;
+    text-align: center;
+    margin-top: 1.5rem;
   }
   .budget-tip-img {
     -webkit-transition:all .9s ease; 
@@ -189,11 +199,11 @@
     -ms-transition:all .9s ease;
   }
   .budget-tip-img:hover {
-    -webkit-transform:scale(1.15);
-    -moz-transform:scale(1.15);
-    -ms-transform:scale(1.15);
-    -o-transform:scale(1.15);
-    transform:scale(1.15);
+    -webkit-transform:scale(1.05);
+    -moz-transform:scale(1.05);
+    -ms-transform:scale(1.05);
+    -o-transform:scale(1.05);
+    transform:scale(1.05);
   }
   /*test code
   */
