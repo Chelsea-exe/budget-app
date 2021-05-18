@@ -62,7 +62,7 @@
     color: white;
   }
   #expense-submit {
-    background: linear-gradient(45deg, #ad1313, #ff0000);
+    background: linear-gradient(45deg, #b10404, #ff1f1f);
     border: 0.1rem solid White;
     border-radius: 2rem;
     color: white;
@@ -192,6 +192,43 @@
     text-align: center;
     margin-top: 1.5rem;
   }
+  .budget-accordin{
+    border-bottom-left-radius: 20rem;
+  }
+  .start-btn:focus {
+    background-color: rgb(0, 60, 172);
+    color: white;
+    font-weight: bold;
+    border-radius: 1rem;
+  }
+  .bank-tip-btn:focus {
+    background-color: #58d66d;
+    color: white;
+    font-weight: bold;
+    border-radius: 1rem;
+  }
+  .calendar-btn:focus {
+    background-color: rgb(187, 60, 219);
+    color: white;
+    font-weight: bold;
+    border-radius: 1rem;
+  }
+  .track-btn:focus {
+    background-color: rgb(255, 132, 95);
+    color: white;
+    font-weight: bold;
+    border-radius: 1rem;
+  }
+  .goal-btn:focus {
+    background-color: rgb(185, 233, 255);
+    color: white;
+    font-weight: bold;
+    border-radius: 1rem;
+  }
+  /* #bank-tip-btn:visited {
+    background-color: #68f844;
+    color: white;
+  } */
   /*test code
   */
   /* .btn-primary:hover,
@@ -317,10 +354,13 @@
       border-radius: 50%;
   } */
   /*end of test code*/
-  @media screen and (max-width: 992px) {
+  @media screen and (min-width: 320px) and (max-width: 425px)  {
     .header {
       background-image: url(./budget-background-sm-03.png);
     }
+    /* .budget-cards-row {
+      width: 50%;
+    } */
     .money-header {
       background: linear-gradient(rgba(0, 0, 0, 0.39), rgba(0, 0, 0, 0.39)), url(./budget-tips-icon_banner-768_banner.png);
       background-position: center;
@@ -337,6 +377,80 @@
       font-weight: 600;
       text-align: center;
       margin-top: 3.5rem;
+    }
+    .budget {
+      font-size: 2.6rem;
+      color: var(--mainGreen);
+    }
+    .expense {
+      font-size: 2.6rem;
+      color: var(--mainRed);
+    }
+    .balance {
+      font-size: 2.6rem;
+    }
+    .description {
+      margin-top: -2%;
+      color: rgb(73, 73, 73);
+      font-size: 0.9rem;
+    }
+    .budget-icon,
+    .expense-icon,
+    .balance-icon {
+      font-size: 3.5rem;
+      color: var(--mainBlue);
+    }
+    .budget-png,
+    .expense-png,
+    .balance-png {
+      height: 5rem; 
+    }
+    #budget-amount,
+    #expense-amount,
+    #balance-amount,
+    span
+    {
+      font-size: 1.8rem;
+    }
+    .expense-title,
+    .expense-amount {
+      font-size: 32%;
+    }
+
+  }
+  .list-item {
+    flex: 0 0 33.33%;
+    text-align: center;
+  }
+  .expense-item {
+    height: 2rem;
+  }
+  @media screen and (max-width: 992px) and (min-width: 426px) {
+    .header {
+      background-image: url(./budget-background-sm-03.png);
+    }
+    /* .budget-cards-row {
+      width: 50%;
+    } */
+    .money-header {
+      background: linear-gradient(rgba(0, 0, 0, 0.39), rgba(0, 0, 0, 0.39)), url(./budget-tips-icon_banner-768_banner.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 12rem;
+      width: 98%;
+      border-radius: .50rem;
+    }
+    #tips-header {
+      font-size: 3rem;
+      font-family: var(--fontTwo);
+      color: var(--mainWhite);
+      font-weight: 600;
+      text-align: center;
+      margin-top: 3.5rem;
+    }
+    #goal-tip {
+      width: 25%;
     }
     .budget {
       font-size: 2.6rem;
