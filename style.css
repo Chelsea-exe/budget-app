@@ -225,135 +225,6 @@
     font-weight: bold;
     border-radius: 1rem;
   }
-  /* #bank-tip-btn:visited {
-    background-color: #68f844;
-    color: white;
-  } */
-  /*test code
-  */
-  /* .btn-primary:hover,
-  .btn-primary:focus {
-      background-color: #108d6f;
-      border-color: #108d6f;
-      box-shadow: none;
-      outline: none;
-  }
-  
-  .btn-primary {
-      color: #fff;
-      background-color: #007b5e;
-      border-color: #007b5e;
-  }
-  
-  section {
-      padding: 60px 0;
-  }
-  
-  section .section-title {
-      text-align: center;
-      color: #007b5e;
-      margin-bottom: 50px;
-      text-transform: uppercase;
-  }
-  
-  #team .card {
-      border: none;
-      background: #ffffff;
-  }
-  
-  .image-flip:hover .backside,
-  .image-flip.hover .backside {
-      -webkit-transform: rotateY(0deg);
-      -moz-transform: rotateY(0deg);
-      -o-transform: rotateY(0deg);
-      -ms-transform: rotateY(0deg);
-      transform: rotateY(0deg);
-      border-radius: .25rem;
-  }
-  
-  .image-flip:hover .frontside,
-  .image-flip.hover .frontside {
-      -webkit-transform: rotateY(180deg);
-      -moz-transform: rotateY(180deg);
-      -o-transform: rotateY(180deg);
-      transform: rotateY(180deg);
-  }
-  
-  .mainflip {
-      -webkit-transition: 1s;
-      -webkit-transform-style: preserve-3d;
-      -ms-transition: 1s;
-      -moz-transition: 1s;
-      -moz-transform: perspective(1000px);
-      -moz-transform-style: preserve-3d;
-      -ms-transform-style: preserve-3d;
-      transition: 1s;
-      transform-style: preserve-3d;
-      position: relative;
-  }
-  
-  .frontside {
-      position: relative;
-      -webkit-transform: rotateY(0deg);
-      -ms-transform: rotateY(0deg);
-      z-index: 2;
-      margin-bottom: 30px;
-  }
-  
-  .backside {
-      position: absolute;
-      top: 0;
-      left: 0;
-      background: white;
-      -webkit-transform: rotateY(-180deg);
-      -moz-transform: rotateY(-180deg);
-      -o-transform: rotateY(-180deg);
-      -ms-transform: rotateY(-180deg);
-      transform: rotateY(-180deg);
-      -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
-      -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
-      box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
-  }
-  
-  .frontside,
-  .backside {
-      -webkit-backface-visibility: hidden;
-      -moz-backface-visibility: hidden;
-      -ms-backface-visibility: hidden;
-      backface-visibility: hidden;
-      -webkit-transition: 1s;
-      -webkit-transform-style: preserve-3d;
-      -moz-transition: 1s;
-      -moz-transform-style: preserve-3d;
-      -o-transition: 1s;
-      -o-transform-style: preserve-3d;
-      -ms-transition: 1s;
-      -ms-transform-style: preserve-3d;
-      transition: 1s;
-      transform-style: preserve-3d;
-  }
-  
-  .frontside .card,
-  .backside .card {
-      min-height: 312px;
-  }
-  
-  .backside .card a {
-      font-size: 18px;
-      color: #007b5e !important;
-  }
-  
-  .frontside .card .card-title,
-  .backside .card .card-title {
-      color: #007b5e !important;
-  } */
-  
-  /* .frontside .card .card-body img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-  } */
-  /*end of test code*/
   @media screen and (min-width: 320px) and (max-width: 426px)  {
     .header {
       background-image: url(./budget-background-sm-03.png);
@@ -427,6 +298,36 @@
   }
     #goal-tip {
       width: 100%;
+    }
+    .start-btn:focus {
+      background-color: rgb(0, 60, 172);
+      color: white;
+      font-weight: bold;
+      border-radius: 1rem;
+    }
+    .bank-tip-btn:focus {
+      background-color: #58d66d;
+      color: white;
+      font-weight: bold;
+      border-radius: 1rem;
+    }
+    .calendar-btn:focus {
+      background-color: rgb(187, 60, 219);
+      color: white;
+      font-weight: bold;
+      border-radius: 1rem;
+    }
+    .track-btn:focus {
+      background-color: rgb(255, 132, 95);
+      color: white;
+      font-weight: bold;
+      border-radius: 1rem;
+    }
+    .goal-btn:focus {
+      background-color: rgb(185, 233, 255);
+      color: white;
+      font-weight: bold;
+      border-radius: 1rem;
     }
   @media screen and (min-width: 768px) and (max-width: 992px) {
     .header {
@@ -505,4 +406,33 @@
   .expense-item {
     height: 2rem;
   }
-
+  .start-btn:focus {
+    background-color: rgb(0, 60, 172);
+    color: white;
+    font-weight: bold;
+    border-radius: 1rem;
+  }
+  .bank-tip-btn:focus {
+    background-color: #58d66d;
+    color: white;
+    font-weight: bold;
+    border-radius: 1rem;
+  }
+  .calendar-btn:focus {
+    background-color: rgb(187, 60, 219);
+    color: white;
+    font-weight: bold;
+    border-radius: 1rem;
+  }
+  .track-btn:focus {
+    background-color: rgb(255, 132, 95);
+    color: white;
+    font-weight: bold;
+    border-radius: 1rem;
+  }
+  .goal-btn:focus {
+    background-color: rgb(185, 233, 255);
+    color: white;
+    font-weight: bold;
+    border-radius: 1rem;
+  }
