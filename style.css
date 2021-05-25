@@ -354,7 +354,7 @@
       border-radius: 50%;
   } */
   /*end of test code*/
-  @media screen and (min-width: 320px) and (max-width: 425px)  {
+  @media screen and (min-width: 320px) and (max-width: 426px)  {
     .header {
       background-image: url(./budget-background-sm-03.png);
     }
@@ -362,7 +362,7 @@
       width: 50%;
     } */
     .money-header {
-      background: linear-gradient(rgba(0, 0, 0, 0.39), rgba(0, 0, 0, 0.39)), url(./budget-tips-icon_banner-768_banner.png);
+      background: linear-gradient(rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0.555)), url(./budget-tips-icon-sm-1-10-10-10.png);
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -376,7 +376,7 @@
       color: var(--mainWhite);
       font-weight: 600;
       text-align: center;
-      margin-top: 3.5rem;
+      margin-top: 3rem;
     }
     .budget {
       font-size: 2.6rem;
@@ -425,15 +425,21 @@
   .expense-item {
     height: 2rem;
   }
-  @media screen and (max-width: 992px) and (min-width: 426px) {
+    #goal-tip {
+      width: 100%;
+    }
+  @media screen and (min-width: 768px) and (max-width: 992px) {
     .header {
-      background-image: url(./budget-background-sm-03.png);
+      background-image: url(./budget-background-03.png);
+    }
+    .description {
+      margin-top: 50rem;
     }
     /* .budget-cards-row {
       width: 50%;
     } */
     .money-header {
-      background: linear-gradient(rgba(0, 0, 0, 0.39), rgba(0, 0, 0, 0.39)), url(./budget-tips-icon_banner-768_banner.png);
+      background: linear-gradient(rgba(0, 0, 0, 0.39), rgba(0, 0, 0, 0.39)), url(./budget-tips-icon_banner-768_banner_banner.png);
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -442,12 +448,12 @@
       border-radius: .50rem;
     }
     #tips-header {
-      font-size: 3rem;
+      font-size: 4rem;
       font-family: var(--fontTwo);
       color: var(--mainWhite);
       font-weight: 600;
       text-align: center;
-      margin-top: 3.5rem;
+      margin-top: 3rem;
     }
     #goal-tip {
       width: 25%;
